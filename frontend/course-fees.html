@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #12131A;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      height: 100vh;
+    }
+
+    .contact-left {
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .contact-left h4 {
+      font-size: 14px;
+      color: #4EA5FF;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid #333;
+      color: white;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #0055ff;
+      color: white;
+      padding: 12px 0;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #003fcc;
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone-icon-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    .phone-icon {
+      width: 250px;
+      filter: drop-shadow(0 0 12px #007bff);
+      transition: transform 0.3s ease;
+    }
+
+    .phone-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-info {
+      color: #4EA5FF;
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #007bff);
+      }
+      50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 20px #1e90ff);
+      }
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #007bff);
+      }
+    }
+
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+        padding: 30px;
+        height: auto;
+      }
+
+      .contact-right {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-left">
+    <h1>Contact Us</h1>
+    <h4>DROP A MESSAGE</h4>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name*" required>
+      <input type="email" placeholder="Email*" required>
+      <input type="tel" placeholder="Phone*" required>
+      <button class="submit-btn" type="submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <div class="contact-right">
+    <div class="phone-icon-wrapper">
+      <img src="images/3d image.jpg" alt="3D Phone Icon" class="phone-icon" style="font-size: 100px;"/>
+    </div>
+    <div class="contact-info">
+      Call us now for more information<br>
+      <strong>9647500355</strong>
+    </div>
+  </div>
+
+</body>
+</html>

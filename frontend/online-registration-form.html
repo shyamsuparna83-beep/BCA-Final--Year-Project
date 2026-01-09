@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Admission Form</title>
+  <style>
+    body {
+      background-image: url('images/blue-ocean-bottom-with-bubbles-and-light-rays-deep-underwater-background-animation-video.jpg');
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px;
+      margin: 0;
+    }
+
+    .form-wrapper {
+      background-color: #fff;
+      max-width: 750px;
+      margin: auto;
+      padding: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .form-header {
+      background: linear-gradient(135deg, #7b1fa2, #512da8);
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    .form-header .google-icon {
+      display: inline-block;
+      background-color: white;
+      color: #673AB7;
+      font-weight: bold;
+      font-size: 22px;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .form-header h2 {
+      font-size: 28px;
+      margin: 5px 0;
+    }
+
+    .form-header p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .form-body {
+      padding: 30px 40px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 30px 0 15px;
+      color: #5e35b1;
+      border-bottom: 2px solid #e1bee7;
+      padding-bottom: 6px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #c7a4ff;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #f9f6ff; 
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+      border-color: #7e57c2;
+      box-shadow: 0 0 5px rgba(126, 87, 194, 0.4);
+      outline: none;
+      background-color: #f2ebff; /* Slightly deeper on focus */
+    }
+
+    .required {
+      color: red;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #7e57c2;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #5e35b1;
+    }
+
+    @media (max-width: 600px) {
+      .form-body {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <div class="form-header">
+      <div class="google-icon">G</div>
+      <h2>Online Admission Form</h2>
+      <p>Powered by Google Forms Style</p>
+      <p><strong>*</strong> Required field</p>
+    </div>
+
+    <div class="form-body">
+      <div class="form-group">
+        <label for="trade">Trade Applied For <span class="required">*</span></label>
+        <select id="trade" required>
+          <option value="">-- Select Trade --</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Fitter">Fitter</option>
+          <option value="Welder">Welder</option>
+        </select>
+      </div>
+
+      <div class="section-title">Candidate Details</div>
+
+      <div class="form-group">
+        <label for="studentName">Student Name <span class="required">*</span></label>
+        <input type="text" id="studentName" placeholder="Enter full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="fatherName">Father's Name <span class="required">*</span></label>
+        <input type="text" id="fatherName" placeholder="Enter father's name" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Mother's Name <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter mother's name" required />
+      </div>
+      <div class="form-group">
+        <label for="address">Address <span class="required">*</span></label>
+        <input type="text" id="address" placeholder="Enter residential address" required />
+      </div>
+      <div class="form-group">
+        <label for="address">Pin Code <span class="required">*</span></label>
+        <input type="text" id="address" placeholder="Enter residential address" required />
+      </div>
+      <div class="form-group">
+        <label for="trade">Caste <span class="required">*</span></label>
+        <select id="trade" required>
+          <option value="">-- Select Caste--</option>
+          <option value="Electrician">Hindu</option>
+          <option value="Fitter">Muslim</option>
+          <option value="Welder">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="trade">Category <span class="required">*</span></label>
+        <select id="trade" required>
+          <option value="">-- Select Category --</option>
+          <option value="Electrician">General</option>
+          <option value="Fitter">OBC</option>
+          <option value="Welder">SC</option>
+          <option value="Welder">ST</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="trade">Gender <span class="required">*</span></label>
+        <select id="trade" required>
+          <option value="">-- Select Gender --</option>
+          <option value="Male">General</option>
+          <option value="Female">OBC</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="motherName">Blood Group <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Blood Group" required />
+      </div>
+
+
+      <div class="form-group">
+        <label for="dob">Date of Birth <span class="required">*</span></label>
+        <input type="date" id="dob" required />
+      </div>
+
+      
+
+      <div class="form-group">
+        <label for="phone">Aadhar Card  Number <span class="required">*</span></label>
+        <input type="text" id="phone" placeholder="Enter Aadhar Card number" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Mobile Number <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Mobile Number" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Alternate Mobile Number <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Alternate Mobile Number" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Emial Address <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Email Address" required />
+      </div>
+      <div class="section-title">Education Details</div>
+      <div class="form-group">
+        <label for="trade">Last Examination Passed <span class="required">*</span></label>
+        <select id="trade" required>
+          <option value="">-- Select --</option>
+          <option value="Male">Eight(8th)</option>
+          <option value="Female">Madyamik(10th)</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="motherName">Year Of Passing <span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Year Of Passing" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Board<span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Board" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Name Of School / College / University<span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Name Of School / College / University" required />
+      </div>
+      <div class="form-group">
+        <label for="motherName">Aggregate Percentage<span class="required">*</span></label>
+        <input type="text" id="motherName" placeholder="Enter Aggregate Percentage" required />
+      </div>
+    
+
+
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+
+</body>
+</html>

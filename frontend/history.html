@@ -1,0 +1,406 @@
+<html>
+    <head>
+        <title>Welcome to Flexon </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link href="fonts/css/fontawesome.css" rel="stylesheet" />
+        <link href="fonts/css/brands.css" rel="stylesheet" />
+        <link href="fonts/css/solid.css" rel="stylesheet" />
+        <link href="fonts/css/sharp-thin.css" rel="stylesheet" />
+        <link href="fonts/css/duotone-thin.css" rel="stylesheet" />
+        <link href="fonts/css/sharp-duotone-thin.css" rel="stylesheet" />
+        <style>
+    .button-container {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .btn {
+      padding: 15px 27px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+
+    .btn-orange {
+      background-color: #f45b0d;
+    }
+
+    .btn-green {
+      background-color: #0aa40a;
+    }
+
+    .btn-red {
+      background-color: #d62323;
+      line-height: 1.3;
+      text-align: center;
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      background-color: #5546f8;
+      align-items: center;
+      padding: 0 80px;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 16px 20px;
+      text-decoration: none;
+      display: block;
+      position: relative;
+    }
+
+    .navbar .active {
+      background-color: rgb(0, 217, 255); /* Active tab color */
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: orangered;
+      min-width: 180px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown-content a {
+      padding: 12px 16px;
+      color: white;
+    }
+
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: #008ee6;
+    }
+  </style>
+  <style>
+    .image-container {
+      position: relative;
+      width: 400px; /* Adjust based on image size */
+      height: 400px;
+    }
+
+    .image-container img {
+      width: 250px;
+      height: auto;
+      border: 10px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .bottom-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+    }
+  </style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+.upper{
+      overflow: hidden;
+    }
+    .footer {
+      background-color: #1c1c2b;
+      color: #ffffff;
+      padding: 50px 10%;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .footer p,
+    .footer a {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #4e9eff;
+    }
+
+    .footer .social-icons a {
+      color: #fff;
+      font-size: 18px;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      color: #00f5d4;
+    }
+
+    .subscribe-box {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .subscribe-box input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 3px 0 0 3px;
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .subscribe-box button {
+      background-color: #4e9eff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      margin-top: 30px;
+    }a{
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .subscribe-box {
+        flex-direction: column;
+      }
+      .subscribe-box input,
+      .subscribe-box button {
+        border-radius: 3px;
+        margin: 5px 0;
+        width: 100%;
+      }
+    }
+  </style>
+  </head>
+    <body>
+        <div class="upper">
+    <div class="row" style="border: 1px solid  gray;height: 60px;">
+                <div class="col-sm-5">
+                    <div style="color: blue; text-align: left; font-size: 18px; padding: 20px;">CALL:
+                    <span i class="fa-brands fa-whatsapp" style="color: rgba(0, 255, 55, 0.805); background-color: green; text-align: left; font-size: 20px;"></i></span>
+                    <span style="color: rgb(20, 20, 117); text-align: left; font-size: 18px;">09647500355 / 8768587662</span>
+                </div>
+                </div>
+                <div class="col-sm-7">
+                    <div style="color: rgb(253, 73, 7); text-align: right; font-size: 18px; padding-top: 15px; padding-left: none; padding-right: 10px;">University Registration For Freshers
+                        <span style="color: rgb(253, 73, 7); text-align: right; font-size: 18px; padding-top: 15px;">&nbsp;&nbsp;|</span>
+                        <span i class="fa-solid fa-globe" style="color: rgb(69, 7, 253); text-align: left; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+                        <span style="color: rgb(253, 73, 7); text-align: right; font-size: 18px; padding-top: 15px;">www.rashawiti.org</span>
+                        <span i class="fa-brands fa-facebook" style="color: blue; text-align: right; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+                        <span i class="fa-brands fa-google" style="color: blue; text-align: right; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+                        <span i class="fa-brands fa-twitter" style="color: blue; text-align: right; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+                        <span i class="fa-brands fa-pinterest" style="color: blue; text-align: right; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+                        <span i class="fa-brands fa-square-instagram" style="color: blue; text-align: right; font-size: 17px; padding-top: 15px; padding-left: 5px;"></i></span>
+        
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-sm-1">
+            <img src="images/hii.jpg" style=" text-align: left; padding-top: 15px; padding-left: 80px;height: 125px;">
+          </div>
+          <div class="col-sm-5">
+            <div style="color: rgb(11, 11, 133);font-size: 25px;text-align: left; padding-top: 30px; padding-left: 80px;">
+              <h4>R. A. Shaw Private Industrial Training Institute</h4>
+            </div>
+            <div style="color: rgb(124, 124, 124);font-size: 15px;text-align: center; padding-top: 1px; padding-right: 10px;">
+              <b>(Unit of Ram Awadh Shaw Memorial Trust)<br>Affiliate to N.C.V.T., New Delhi<br>An ISO 29990 : 2010 Certified ITI</b>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="button">
+              <a href="cover.html">
+              <button class="btn btn-orange" style="margin-top: 70px;">Online Registration</button>
+              </a>
+              <span class="button"><a href="images.html">
+                <button class="btn btn-green" style="margin-top: 70px; margin-left: 6px;">Campus Tour</button></a>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="button" style="text-align: center; height: 80px;"><a href="contact us.html">
+              <button class="btn btn-red" style="margin-top: 60px;">Admission Query?<br>Click Here</button></a>
+            </div>
+          </div>
+        </div>
+        
+        <nav class="navbar">
+    <a href="website.html">Home</a>
+    <div class="dropdown">
+      <a href="#">About Us ▼</a>
+      <div class="dropdown-content">
+        <a href="about us.html">About Institute</a>
+        <a href="history.html">History</a>
+        <a href="managingtrust.html">Managing Trust</a>
+        <a href="chairmanmesage.html">Chairman Message</a>
+        <a href="principal message.html">Principal Desk</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Administration ▼</a>
+      <div class="dropdown-content">
+        <a href="administrative staff.html">Administrative Staff</a>
+        <a href="faculty.html">Faculty</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="course2.html">Courses ▼</a>
+      <div class="dropdown-content">
+        <a href="courses.html">Schemes</a>
+        <a href="courses.html">CTS</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Gallery ▼</a>
+      <div class="dropdown-content">
+        <a href="images.html">Photo Gallery</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Admission ▼</a>
+      <div class="dropdown-content">
+        <a href="admissionprocedure.html">Eligibility Criteria</a>
+        <a href="admissionprocedure2.html">Admission Procedure</a>
+         <a href="feestructure.html">Course Fees</a>
+        </div>
+      </div>
+
+    <div class="dropdown">
+      <a href="#">Students Area ▼</a>
+      <div class="dropdown-content">
+        <a href="cover.html">Online Registration</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Placements ▼</a>
+      <div class="dropdown-content">
+        <a href="industrialvisit.html">Industrial Visit</a>
+        <a href="placementpartners2.html">Placement Partner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">ShowCase ▼</a>
+      <div class="dropdown-content">
+        <a href="tradewise.html">TradeWise Infrastructure</a>
+        <a href="ratings of institute.html">Rating Of Institute</a>
+        <a href="electricpower.html">Electric Power Supply</a>
+
+      </div>
+    </div>
+    <a href="contact us.html">Contact</a>
+  </nav>
+  <img src="images/1101201709164905022017170241DSC03867.jpg" style="height:380px; width:1528px">
+  </div>
+  <div class="container">
+    <div style="text-align: left; margin-top:20px ; font-size: 16px;color: black">The<b> R.A Shaw Private Industrial Training Institute</b> is the brain of <b>Sri Shyamnarayan Jaswal</b>,President/Secretary,<br><b> Ram Awadh Shaw Memorial Trustee Board</b>. The R. A. Shaw Pvt I.T.I has been established by the Ram Awadh Shaw<br> Memorial Trust and is conveniently located in a semi-urban area, Andal, Dist.- Paschim Bardhaman, West Bengal<br> Pin-713321. This institute is established in an Eco-friendly surrounding, easily approachable by land & Rail-route<br> from the areas of Durgapur, Asansol, Raniganj and the district headquarters at Burdwan.</div>
+    <div style="text-align: left; margin-top:20px ; font-size: 16px; color: black">It is approximately 160 km from the capital city of Kolkata by rail and 180 km byroad.It is about 12 km from Durgapur<br> City Center. Durgapur, an industrial city that nurtures Durgapur Steel Plant (DSP) and Alloy steels Plant of SAIL, a<br> number of govt. and private industries in power and other sectors,educational and a good number of technical<br> institutions. it is 10 km away from Raniganj,one of oldest towns and a coal belt area and about 25 km away from<br> Asansol. it is well connected by Indian Railway (Andal Railway Station)and Andal Airport (Kazi Nazrul Islam Airport),<br> road i.e national highway(NH-2).</div>
+    <div style="text-align: left; margin-top:20px ; font-size: 16px; color: black">This I.T.I is set up in such an industrial and resourceful environment that the students passing out from this institute<br> are supposed to be flooded with jobs.But without skill development,the dream will not be transmitted into reality.<br> Apart from thousands of small entrepreneurs in industry,this institute is surrounded by Mega Steel Plants ,D.S.P,<br> A.S.P and other private industries viz. Alstom, PCBL,Graphite India, Balaji etc. In the east and IISCO in burnpur,<br> McNally Bharat, Dishergarh power plant in the west, Mega and super power plants like DVC, NTPC ,DPL ,DTPS,<br> Bakreswar TPS, Maithon Hydel Power etc. in the north and south.A new airport,adjacent to this institute will shortly<br> be in operation. We need not require to mention the existence of huge deposit of coal,the "Black Diamond" <br>underground near its immediate and nearest surrounding.The demand of skilled manpower is required everywhere<br> in these areas.So job prospects are definitely noteworthy surrounding this institute.</div>
+    <div style="text-align: left; margin-top:20px ; font-size: 16px; color: red;"><i>The institute aims at imparting training both theoretically and practically to the student of ordinary merit including school<br> dropouts in various job-oriented courses in commercial and technical discipline so that their skill development initiative<br> through this institute confidently put themselves in service in a well-established future by securing a job in government or<br> private industries/establishments or through entrepreneurship development process.</i></div>
+    <div style="border: 20px; text-align: right;color: #008ee6;"></div>
+
+
+
+
+  </div>
+  <br>
+  <br>
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> ANDAL MORE (UKHRA ROAD),<br>P.O. - ANDAL, DIST. - PASCHIM BARDHAMAN,<br>PIN - 713321, W.B.</p>
+        <p><i class="fas fa-globe"></i> www.rashawiti.org</p>
+        <p><i class="fas fa-phone-alt"></i> 09647500355 / 8768587662</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Get updates & news directly to your inbox.</p>
+        <div class="subscribe-box">
+          <input type="email" placeholder="Your Email Address">
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#">Admissions</a>
+        <a href="#">Courses</a>
+        <a href="#">Results</a>
+        <a href="#">Support</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      @Suparna Shyam. All Rights Reserved. 
+    </div>
+  </footer>
+  </body>
+  </html>
