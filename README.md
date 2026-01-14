@@ -10,7 +10,7 @@ The project is divided into two main parts: Frontend and Backend.
 - HTML
 - CSS
 - JavaScript  
-(mention React / Bootstrap if used)
+- Bootstrap 
 
  Backend
 - ASP.NET  
